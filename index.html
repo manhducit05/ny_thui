@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css" integrity="sha512-JQksK36WdRekVrvdxNyV3B0Q1huqbTkIQNbz1dlcFVgNynEMRl0F8OSqOGdVppLUDIvsOejhr/W5L3G/b3J+8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .card {
+            text-align: center;
+            border: 5px solid palevioletred;
+            padding: 20px;
+        }
+        .title {
+            font-size: 50px;
+            font-weight: 550;
+            margin-bottom: 20px;
+        }
+        img {
+            object-fit: cover;
+            height: 500px;
+        }
+        .answer button {
+            margin: 10px;
+        }
+        .btn{
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .btn-success{
+            background-color: #198754;
+        }
+        .btn-danger{
+            background-color: #DC3545;
+        }
+        .card-success{
+            display: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="title">Cuối tuần này đi chơi với a nhóe babi!</div>
+        <div class="img">
+        </div>
+        <div class="answer">
+            <!-- Các nút sử dụng lớp Bootstrap -->
+            <button class="btn btn-success">Dạ, em đồng ý</button>
+            <button class="btn btn-danger">Đéo</button>
+        </div>
+    </div>
+    <div class="card-success">
+        <div class="title">Iu vợ nhìu!!!!</div>
+        <img src="./img/z6206267376725_3b068525951c2aa1abed3913b18970c6.jpg" alt="">
+    </div>
+</body>
+<script>
+    // Chờ DOM được tải đầy đủ
+    document.addEventListener('DOMContentLoaded', function () {
+        const btnDanger = document.querySelector('.btn-danger');
+        const btnSuccess = document.querySelector('.btn-success');
+        const form1 = document.querySelector('.card');
+        const form2 = document.querySelector('.card-success');
+        btnDanger.addEventListener('click', function () {
+            // Lấy kích thước hiện tại của btn-success
+            const currentFontSize = parseFloat(window.getComputedStyle(btnSuccess).fontSize);
+            const currentPadding = parseFloat(window.getComputedStyle(btnSuccess).padding);
+
+            // Tăng kích thước lên 1.1 lần
+            btnSuccess.style.fontSize = (currentFontSize * 1.1) + 'px';
+            btnSuccess.style.padding = (currentPadding * 1.1) + 'px';
+        });
+        btnSuccess.addEventListener('click', function(){
+            form1.style.display = 'none';
+            form2.style.display = 'block';
+        })
+    });
+</script>
+
+</html>
