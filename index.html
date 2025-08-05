@@ -1,61 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css"
-        integrity="sha512-JQksK36WdRekVrvdxNyV3B0Q1huqbTkIQNbz1dlcFVgNynEMRl0F8OSqOGdVppLUDIvsOejhr/W5L3G/b3J+8w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css" integrity="sha512-JQksK36WdRekVrvdxNyV3B0Q1huqbTkIQNbz1dlcFVgNynEMRl0F8OSqOGdVppLUDIvsOejhr/W5L3G/b3J+8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .card {
             text-align: center;
             border: 5px solid palevioletred;
             padding: 20px;
         }
-
         .title {
             font-size: 50px;
             font-weight: 550;
             margin-bottom: 20px;
         }
-
         img {
             object-fit: cover;
             height: 500px;
         }
-
         .answer button {
             margin: 10px;
         }
-
-        .btn {
+        .btn{
             color: white;
             border: none;
             padding: 10px;
             border-radius: 10px;
             cursor: pointer;
         }
-
-        .btn-success {
+        .btn-success{
             background-color: #198754;
         }
-
-        .btn-danger {
+        .btn-danger{
             background-color: #DC3545;
         }
-
-        .card-success {
+        .card-success{
             display: none;
             text-align: center;
         }
     </style>
 </head>
-
 <body>
     <div class="card">
-        <div class="title">Em có nhớ anh kh!</div>
+        <div class="title">Em có nhớ anh không?</div>
         <div class="img">
         </div>
         <div class="answer">
@@ -65,8 +54,8 @@
         </div>
     </div>
     <div class="card-success">
-        <div class="title">Anh biết ngay mà!!!!</div>
-        <img src="./img/z6876741825204_0310a455058b3ff5e39f1d8f2c140cdc.jpg" alt="">
+        <div class="title">Anh biết mà, note e nhé!</div>
+        <img src="./img/z6876771220382_37141ef12eb75c32113815e393c85d6d.jpg" alt="">
     </div>
 </body>
 <script>
@@ -85,7 +74,7 @@
             btnSuccess.style.fontSize = (currentFontSize * 1.1) + 'px';
             btnSuccess.style.padding = (currentPadding * 1.1) + 'px';
         });
-        btnSuccess.addEventListener('click', function () {
+        btnSuccess.addEventListener('click', function(){
             form1.style.display = 'none';
             form2.style.display = 'block';
         })
